@@ -1,0 +1,6 @@
+<section *ngFor="let company of companyList" class="weather__card" (click)="openDetails(company.id)" >
+  <span class="city-name__text">{{ company.name }}</span>
+  <div>
+    <span>{{ company.desc }}</span>
+  </div>
+</section>

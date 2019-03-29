@@ -35,7 +35,7 @@ export class DetailsComponent implements OnInit {
   }
 
   userMsg(option){
-    this.messageList.push({"parMsg":{"msg":option.optionName,"userClass":"other","url":"./../assets/images.png"})
+    this.messageList.push({"parMsg":{"msg":option.optionName,"userClass":"other","url":"./../assets/images.png"}})
     this.customer.getMessage(option.id,this.companyId)
       .subscribe((data:any) => {
         this.message=data;

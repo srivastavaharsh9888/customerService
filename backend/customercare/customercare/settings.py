@@ -13,7 +13,7 @@ SECRET_KEY = 'y$03hv)n%1^j3ye3hhu822%lk=qbh1u(x$w&&at783d79k$=n!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['18.224.150.95','customerhelp.tk','www.customerhelp.tk']
 
 
 # Application definition
@@ -36,7 +36,11 @@ CORS_ALLOW_CREDENTIALS = False
 
 CORS_ORIGIN_WHITELIST = (
      'localhost:4200',
-     'localhost:8000'
+     'localhost:8000',
+     '18.224.150.95',
+     'customerhelp.tk',
+     'www.customerhelp.tk',
+     'customerhelp'
 )
 
 MIDDLEWARE = [
@@ -119,5 +123,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 MEDIA_URL='/media/'
 MEDIA_ROOT=BASE_DIR

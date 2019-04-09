@@ -11,7 +11,7 @@ export class CustomerService {
   getCompanyState(): Subject<string> {
     const dataSubject = new Subject<any>();
     this.http.get(
-      `http://18.224.150.95/list/`)
+      `http://server.customerhelp.tk/list/`)
       .subscribe((data) => {
         dataSubject.next(data);
       },(err) => {
@@ -24,7 +24,7 @@ export class CustomerService {
     const dataSubject = new Subject<any>();
     let id: number;
     this.http.get(
-      `http://18.224.150.95/message/?msgId=${msgId}&companyId=${companyId}`)
+      `http://server.customerhelp.tk/message/?msgId=${msgId}&companyId=${companyId}`)
       .subscribe((message) => {
         dataSubject.next(message);
       },(err)=>{
